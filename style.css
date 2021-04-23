@@ -1,0 +1,46 @@
+/* 
+    Variables CSS / Custom properties
+    super-azul: #72c0c0
+*/
+
+:root{
+    --blue: #72c0c0;
+    --orange: #f90;
+    --black: #000;
+    --white: #fff;
+}
+
+body{
+    background-color: var(--blue);
+    background-image: url(images/pattern.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* h1{
+    color: var(--black);
+    background-color: var(--blue);
+    
+
+} */
+.header, .container{
+    max-width: 1000px;
+    margin: auto;
+}
+.container{
+    background-color: var(--white);
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.child{
+    flex: 1;
+    display: flex;
+}
+.
