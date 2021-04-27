@@ -3,41 +3,149 @@
     super-azul: #72c0c0
 */
 
-:root{
-    --blue: #72c0c0;
-    --orange: #f90;
-    --black: #000;
-    --white: #fff;
+:root {
+  --yellow: #ed9d1b;
+  --orange: #ff7820;
+  --black: #000;
+  --white: #fff;
+  --space: 20px;
 }
 
-body{
-    background-color: var(--blue);
-    background-image: url(images/pattern.jpg);
-    font-family: Arial, Helvetica, sans-serif;
-
+body {
+  background-color: var(--blue);
+  background-image: url(images/pattern.jpg);
+  font-family: Arial, Helvetica, sans-serif;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* h1{
-    color: var(--black);
-    background-color: var(--blue);
-    
-
-} */
-.header, .container{
-    max-width: 1000px;
-    margin: auto;
+.child-right {
+  color: var(--yellow);
 }
-.container{
-    background-color: var(--white);
+.header,
+.container {
+  max-width: 1000px;
+  margin: auto;
 }
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 0;
+.container {
+  background-color: var(--white);
+  border-radius: 4px 4px 0 0;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
 }
 
+/*-------------- Navegation --------------*/
+
+.nav {
+  background-color: var(--orange);
+  display: flex;
+  padding: 10px;
+  padding-left: 45px;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 30px;
+}
+.nav-list,
+.nav-form {
+  flex-grow: 1;
+}
+.nav-list {
+  background-color: var(--orange);
+  display: flex;
+  list-style: none;
+}
+.nav-list-item {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.nav-item-list-link {
+  background-color: var(--orange);
+  display: block;
+  padding: 4px 8px;
+  border-right: 1px solid var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--white);
+}
+.nav-item-list-link:hover {
+  text-decoration: underline;
+}
+.nav-form {
+  background-color: var(--orange);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ------------- Slider de imagenes ---------- */
+
+.slider {
+  /* Si quiero centrar una imagen solo puedo usar text align center en el elmento padre */
+  text-align: center;
+  background-color: var(--white);
+  margin-bottom: 30px;
+}
+
+/* ----------- Principal ----------- */
+
+.main {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  padding: var(--space);
+  padding-top: 0;
+
+  margin-bottom: 40px;
+}
+
+.category-list-item {
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px dashed gray;
+}
+.category-list-item-link {
+  text-decoration: none;
+  display: block;
+  color: var(--black);
+}
+.product-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space);
+}
+.product {
+  padding: var(--space);
+}
+.img-text {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.product-name {
+  padding-bottom: 15px;
+}
+
+/* Termina producto */
+
+.news {
+  margin: auto;
+  margin-bottom: 200px;
+  max-width: 940px;
+
+  background-color: aqua;
+  border-radius: 6px;
+  border: 1px solid var(--black);
+  padding: 10px 40px;
+
+  background-image: linear-gradient(white, grey);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.news figure {
+  margin-top: 10px;
+}
